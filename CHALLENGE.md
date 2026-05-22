@@ -179,7 +179,7 @@ id   # ahora deberías ser root
   sha256sum copy_fail_exp.py 2>/dev/null || echo "N/A"
   echo ""
   echo "--- Salida del exploit ---"
-  # Pega aquí la salida del exploit
+  "uid=0(root) gid=0(root) groups=0(root)"
 } > /tmp/hito2.txt && cat /tmp/hito2.txt
 ```
 

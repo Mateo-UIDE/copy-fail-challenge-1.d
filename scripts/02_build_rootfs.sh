@@ -117,7 +117,9 @@ fi
 exec su - student
 INITEOF
 
-chmod +x "$INITRAMFS_DIR/init"
+chown root:root "$INITRAMFS_DIR/bin/su" 2>/dev/null || true
+chmod 4755 "$INITRAMFS_DIR/bin/su" 2>/dev/null || true
+#chmod +x "$INITRAMFS_DIR/init"
 
 echo -e "${CYAN}[6/6] Empaquetando initramfs...${NC}"
 cd "$INITRAMFS_DIR"
